@@ -1,5 +1,13 @@
 <div class = "container">
+  <%if @info%>
+    <%=@info[0]["owner"]["login"]%>
+  <%end%>
   <h1>Repos</h1>
+  <%if @info%>
+    <%@info.each do |repo|%>
+
+    <%end%>
+  <%end%>
   <!-- List repositories and display username here! -->
 
   <%= form_tag("/repositories/create", method: "post") do %>
